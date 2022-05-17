@@ -1,0 +1,29 @@
+@import '../../common/colors.scss';
+
+.movie-block {
+    margin: 20px 0;
+
+    &__title {
+        margin-bottom: 25px;
+        color: $font-secondary;
+        font-size: 30px;
+        text-align: center;
+    }
+}
+
+.slick-arrow.slick-prev {
+    left: 0;
+    z-index: 10;
+
+    &::before {
+        font-size: 45px;
+    }
+}
+
+.slick-arrow.slick-next {
+    right: 36px;
+
+    &::before {
+        font-size: 45px;
+    }
+}

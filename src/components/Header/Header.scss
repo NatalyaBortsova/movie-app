@@ -1,0 +1,67 @@
+@import '../../common/colors.scss';
+
+.header {
+    background-color: $secondary-color;
+    padding: 20px 15px;
+
+    &__user {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (max-width: 575px) {
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+}
+
+.logo {
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 700;
+    color: $font-primary;
+
+    a {
+        color: $font-primary;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 20px;
+    }
+}
+
+.search {
+    width: 50%;
+
+    &__form {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    &__input {
+        padding: 10px;
+        border-radius: 6px;
+        outline: none;
+        flex: 1 1 auto;
+        font-size: 16px;
+    }
+
+    &__button {
+        padding: 12px;
+        flex: 0 0 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media screen and (max-width: 575px) {
+        order: 1;
+    }
+}

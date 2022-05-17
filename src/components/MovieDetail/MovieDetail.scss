@@ -1,0 +1,77 @@
+@import '../../common/colors.scss';
+
+.movie-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+    column-gap: 30px;
+    color: $font-primary;
+
+    &__title {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    &__rating {
+        display: flex;
+        flex-wrap: wrap;
+        color: $font-secondary;
+        margin-bottom: 15px;
+
+        span {
+            display: inline-flex;
+            align-items: center;
+            column-gap: 5px;
+            padding-bottom: 10px;
+
+            &:not(:last-child) {
+                margin-right: 15px;
+            }
+
+            & svg {
+                font-size: 20px;
+                align-self: center;
+            }
+        }
+    }
+
+    &__text {
+        line-height: 1.4;
+        text-align: justify;
+        margin-bottom: 20px;
+        flex: 0 0 60%;
+    }
+
+    &__descr>div {
+        padding: 10px 0;
+
+        & span:first-child {
+            color: $font-secondary;
+            margin-right: 10px;
+        }
+    }
+
+    &__image {
+        width: 300px;
+        height: 500px;
+        flex: 0 0 auto;
+
+        img {
+            object-fit: fill;
+        }
+
+        @media screen and (max-width: 768px) {
+            width: 200px;
+            height: 300px;
+        }
+
+        @media screen and (max-width: 575px) {
+            display: none;
+        }
+    }
+
+    &__loading {
+        font-size: 30px;
+        color: $font-secondary;
+    }
+}
